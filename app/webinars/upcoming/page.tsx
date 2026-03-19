@@ -624,13 +624,25 @@ export default function UpcomingWebinarsPage() {
                   </div>
                   
                   {/* Early Bird Notice */}
-                  {webinar.earlyBird && (
+                  {/* {webinar.earlyBird && (
                     <div className="mt-4 p-3 bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg">
                       <div className="text-sm text-purple-700 font-semibold">
                         ⚡ Early bird ends {getDaysUntil(webinar.earlyBirdEnds)}
                       </div>
                     </div>
-                  )}
+                  )} */}
+
+
+                {webinar.earlyBird && webinar.earlyBirdEnds && (
+                  <div className="mt-4 p-3 bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg">
+                    <div className="text-sm text-purple-700 font-semibold">
+                      ⚡ Early bird ends {getDaysUntil(webinar.earlyBirdEnds)}
+                    </div>
+                  </div>
+                )}
+
+
+
                 </div>
               </div>
             ))}
@@ -713,7 +725,14 @@ export default function UpcomingWebinarsPage() {
                       <button className="w-full py-3 border border-green-600 text-green-600 rounded-lg hover:bg-green-50 font-semibold">
                         Register Now
                       </button>
-                      {webinar.earlyBird && (
+                      {/* {webinar.earlyBird && (
+                        <div className="text-center text-sm text-purple-600 font-semibold">
+                          ⚡ Early bird ends {getDaysUntil(webinar.earlyBirdEnds)}
+                        </div>
+                      )} */}
+
+
+                      {webinar.earlyBird && webinar.earlyBirdEnds && (
                         <div className="text-center text-sm text-purple-600 font-semibold">
                           ⚡ Early bird ends {getDaysUntil(webinar.earlyBirdEnds)}
                         </div>
