@@ -11,7 +11,8 @@ import {
 } from 'lucide-react'
 import Link from 'next/link'
 import toast from 'react-hot-toast'
-import UniversityCourses from '../universities/UniversityCourses'
+// import UniversityCourses from '../universities/UniversityCourses'
+import UniversityCourses from '@/components/universities/UniversityCourses'
 
 // Mock data - in production, this would come from an API
 const universityData = {
