@@ -2,7 +2,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Calendar, Clock, Users, Video, Zap, TrendingUp, Search, Filter, Bookmark } from 'lucide-react'
+import { Calendar, Clock, Users, Video, Zap, TrendingUp, Search, Filter, Bookmark, X } from 'lucide-react'
 import WebinarCard from '@/components/webinars/WebinarCard'
 import Link from 'next/link'
 
