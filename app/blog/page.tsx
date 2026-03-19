@@ -186,16 +186,37 @@ const forumPosts: ForumPostType[] = [
   }
 ]
 
-const trendingTopics = [
+// const trendingTopics = [
+//   { tag: 'International Students', posts: 1245, trend: 'up' },
+//   { tag: 'Scholarships 2024', posts: 892, trend: 'up' },
+//   { tag: 'STEM OPT', posts: 645, trend: 'steady' },
+//   { tag: 'Application Deadlines', posts: 2345, trend: 'up' },
+//   { tag: 'Financial Aid', posts: 1789, trend: 'steady' },
+//   { tag: 'Graduate Admissions', posts: 956, trend: 'up' },
+//   { tag: 'Visa Updates', posts: 678, trend: 'down' },
+//   { tag: 'Career Outcomes', posts: 1345, trend: 'up' }
+// ]
+
+
+
+
+// To this:
+type TrendType = 'up' | 'down' | 'steady'
+
+const trendingTopics: { tag: string; posts: number; trend: TrendType }[] = [
   { tag: 'International Students', posts: 1245, trend: 'up' },
   { tag: 'Scholarships 2024', posts: 892, trend: 'up' },
   { tag: 'STEM OPT', posts: 645, trend: 'steady' },
   { tag: 'Application Deadlines', posts: 2345, trend: 'up' },
   { tag: 'Financial Aid', posts: 1789, trend: 'steady' },
-  { tag: 'Graduate Admissions', posts: 956, trend: 'up' },
   { tag: 'Visa Updates', posts: 678, trend: 'down' },
   { tag: 'Career Outcomes', posts: 1345, trend: 'up' }
 ]
+
+
+
+
+
 
 const topAuthors = [
   {
