@@ -310,7 +310,7 @@ export default function ForumPostPage() {
           {/* Post Content */}
           <div className="px-8">
             {/* Attachments */}
-            {postData.attachments && postData.attachments.length > 0 && (
+            {/* {postData.attachments && postData.attachments.length > 0 && (
               <div className="mb-8">
                 <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
                   <FileText size={20} />
@@ -345,7 +345,53 @@ export default function ForumPostPage() {
                   ))}
                 </div>
               </div>
-            )}
+            )} */}
+
+
+
+
+          {postData.attachments && postData.attachments.length > 0 && (
+            <div className="mb-8">
+              <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                <FileText size={20} />
+                Resources & Attachments
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {postData.attachments.map((attachment, idx) => (
+                  <div key={idx} className="bg-gray-900/40 rounded-xl p-4 border border-gray-700/50 hover:border-cyan-500/30 transition-colors">
+                    <div className="flex items-center justify-between mb-3">
+                      <div className="flex items-center gap-3">
+                        <div className="p-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-lg">
+                          <Download size={20} className="text-cyan-400" />
+                        </div>
+                        <div>
+                          <div className="font-bold text-white">{attachment.title}</div>
+                          {attachment.size && (
+                            <div className="text-sm text-gray-400">{attachment.size}</div>
+                          )}
+                          {attachment.preview && (
+                            <div className="text-sm text-gray-400">{attachment.preview}</div>
+                          )}
+                        </div>
+                      </div>
+                      {attachment.downloads && (
+                        <div className="text-sm text-gray-400">
+                          {attachment.downloads.toLocaleString()} downloads
+                        </div>
+                      )}
+                    </div>
+                    <button className="w-full py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-semibold hover:opacity-90 transition-opacity">
+                      {attachment.type === 'pdf' ? 'Download PDF' : 'Visit Link'}
+                    </button>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+
+
+
 
             {/* Main Content */}
             <div className="prose prose-lg max-w-none mb-8">
