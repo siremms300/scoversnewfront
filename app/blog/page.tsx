@@ -295,7 +295,17 @@ export default function EduExchangePage() {
     )
   }
 
-  const postTypes = [
+  // const postTypes = [
+  //   { id: 'all', label: 'All Content', icon: <Sparkles size={16} /> },
+  //   { id: 'article', label: 'Articles', icon: <BookOpen size={16} /> },
+  //   { id: 'question', label: 'Questions', icon: <MessageSquare size={16} /> },
+  //   { id: 'discussion', label: 'Discussions', icon: <Users size={16} /> },
+  //   { id: 'resource', label: 'Resources', icon: <Zap size={16} /> }
+  // ]
+
+
+
+  const postTypes: { id: string; label: string; icon: React.ReactNode }[] = [
     { id: 'all', label: 'All Content', icon: <Sparkles size={16} /> },
     { id: 'article', label: 'Articles', icon: <BookOpen size={16} /> },
     { id: 'question', label: 'Questions', icon: <MessageSquare size={16} /> },
@@ -303,7 +313,9 @@ export default function EduExchangePage() {
     { id: 'resource', label: 'Resources', icon: <Zap size={16} /> }
   ]
 
-  const filters: { id: FilterType; label: string; icon: JSX.Element }[] = [
+
+
+  const filters: { id: FilterType; label: string; icon: React.ReactNode  }[] = [
     { id: 'hot', label: 'Hot', icon: <Flame size={16} /> },
     { id: 'new', label: 'New', icon: <Clock size={16} /> },
     { id: 'rising', label: 'Rising', icon: <TrendingUp size={16} /> },
